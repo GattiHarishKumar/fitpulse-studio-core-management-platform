@@ -1,4 +1,3 @@
-Copy everything below directly into your `README.md`:
 
 
 # FitPulse Studio — Core Management Platform
