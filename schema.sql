@@ -1,5 +1,10 @@
-CREATE DATABASE IF NOT EXISTS zumba_db;
-USE zumba_db;
+-- ==========================================================
+-- FitPulse Studio Management Platform
+-- Relational Database Schema & Seed Data
+-- ==========================================================
+
+CREATE DATABASE IF NOT EXISTS fitpulse_db;
+USE fitpulse_db;
 
 DROP TABLE IF EXISTS participants;
 DROP TABLE IF EXISTS batches;
@@ -22,10 +27,12 @@ CREATE TABLE participants (
         ON DELETE SET NULL
 );
 
+-- Seed Data: Sample Studio Batches
 INSERT INTO batches (batch_name, time_slot, max_capacity) VALUES
-('Morning Aerobics', '07:00 AM - 08:00 AM', 20),
-('Evening Cardio Blast', '06:00 PM - 07:00 PM', 25);
+('Morning HIIT & Conditioning', '07:00 AM - 08:00 AM', 20),
+('Evening Cardio Pulse', '06:00 PM - 07:00 PM', 25);
 
+-- Seed Data: Sample Enrolled Members
 INSERT INTO participants (full_name, email, phone, batch_id) VALUES
-('Sarah Connor', 'sarah@example.com', '9876543210', 1),
-('John Doe', 'john.doe@example.com', '9123456780', 2);
+('Harish', 'Harish@example.com', '9876543210', 1),
+('Kumar', 'Kumar@example.com', '9123456780', 2);
