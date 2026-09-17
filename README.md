@@ -106,3 +106,4 @@ git push -u origin main
 - Do not commit database passwords.
 - `target/` should not be committed.
 - The application uses a WAR because it is a Tomcat web application.
+# fitpulse-studio-core-management-platform
