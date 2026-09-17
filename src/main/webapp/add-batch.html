@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>New Batch · Zumba Management</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+<body>
+
+<div class="page-shell">
+
+    <header class="topbar">
+
+        <a class="brand"
+           href="index.html">
+
+            <span class="brand-mark">
+
+                <svg viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="2">
+
+                    <path d="M8 20V9l8-5v16M4 20h16M12 8h.01"/>
+
+                </svg>
+
+            </span>
+
+            <span>Zumba Management</span>
+
+        </a>
+
+
+        <nav class="top-nav">
+
+            <a href="batches?action=list">
+                Batches
+            </a>
+
+            <a href="participants?action=list">
+                Participants
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <div class="page-header">
+
+            <div>
+
+                <h2>
+                    Create a batch
+                </h2>
+
+                <p>
+                    Add a new class slot to the schedule.
+                </p>
+
+            </div>
+
+            <a class="btn btn-secondary"
+               href="batches?action=list">
+
+                Back to batches
+
+            </a>
+
+        </div>
+
+
+        <form class="form-card"
+              action="batches"
+              method="POST">
+
+            <div class="form-card-header">
+
+                <h3>
+                    Batch details
+                </h3>
+
+                <p>
+                    Keep the schedule short and clear
+                    so participants can find the right session quickly.
+                </p>
+
+            </div>
+
+
+            <input type="hidden"
+                   name="action"
+                   value="insert">
+
+
+            <div class="form-grid">
+
+                <div class="form-group full">
+
+                    <label for="batchName">
+                        Batch name
+                    </label>
+
+                    <input id="batchName"
+                           type="text"
+                           name="batchName"
+                           placeholder="e.g. Morning Aerobics"
+                           required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="timeSlot">
+                        Time slot
+                    </label>
+
+                    <input id="timeSlot"
+                           type="text"
+                           name="timeSlot"
+                           placeholder="07:00 AM - 08:00 AM"
+                           required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="maxCapacity">
+                        Maximum capacity
+                    </label>
+
+                    <input id="maxCapacity"
+                           type="number"
+                           name="maxCapacity"
+                           min="1"
+                           max="100"
+                           value="20"
+                           required>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-actions">
+
+                <a class="btn btn-secondary"
+                   href="index.html">
+
+                    Cancel
+
+                </a>
+
+                <button class="btn btn-primary"
+                        type="submit">
+
+                    Save batch
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </main>
+
+</div>
+
+</body>
+
+</html>
