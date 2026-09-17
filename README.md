@@ -1,6 +1,6 @@
 Copy everything below directly into your `README.md`:
 
-````markdown
+
 # FitPulse Studio — Core Management Platform
 
 A Java EE MVC-based fitness studio management platform for managing classes, batches, and participants with complete CRUD operations.
